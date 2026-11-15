@@ -1,0 +1,305 @@
+/* =====================================================
+   BLOOD DONATION CAMP - style.css
+   One stylesheet shared by every page.
+   Sections: 1 Colours | 2 General | 3 Navbar | 4 Buttons
+             5 Hero | 6 Cards | 7 Blood group buttons
+             8 Forms | 9 Notice box | 10 Footer | 11 Mobile
+   ===================================================== */
+
+/* ---------- 1. COLOURS (change these to restyle the whole site) ---------- */
+:root {
+  --main-color: #c62828;   /* red used for buttons, links, headings */
+  --dark-color: #8e1b1b;   /* darker red for hover */
+  --light-color: #fdecea;  /* very light red for backgrounds */
+  --text-color: #333333;   /* normal text */
+  --grey-color: #f5f5f5;   /* light grey for buttons and boxes */
+}
+
+/* ---------- 2. GENERAL ---------- */
+* {
+  box-sizing: border-box;   /* padding is included in width */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+a {
+  color: var(--main-color);
+}
+
+.container {              /* keeps content centred and not too wide */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {                /* spacing above and below each section */
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #777777;
+}
+
+/* ---------- 3. NAVBAR ---------- */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;       /* stays at the top while scrolling */
+  top: 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {     /* "active" marks the page you are on */
+  color: var(--main-color);
+}
+
+/* ---------- 4. BUTTONS ---------- */
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--main-color);
+  color: #ffffff;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--dark-color);
+  border-color: var(--dark-color);
+}
+
+.button-outline {         /* white button with red border */
+  background: #ffffff;
+  color: var(--main-color);
+}
+
+.button-outline:hover {
+  background: var(--light-color);
+  color: var(--main-color);
+}
+
+/* ---------- 5. HERO (top banner on the home page) ---------- */
+.hero {
+  background: var(--light-color);
+  padding: 60px 0;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero-text .red {         /* red part of the headline */
+  color: var(--main-color);
+}
+
+.hero-buttons .button {
+  margin: 10px 10px 0 0;
+}
+
+.finder-card {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ---------- 6. CARDS ---------- */
+.card {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-row {               /* puts cards side by side */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-row .card {
+  flex: 1;
+  min-width: 220px;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.badge {                  /* small coloured label */
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.badge-upcoming {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.badge-done {
+  background: #eeeeee;
+  color: #666666;
+}
+
+/* ---------- 7. BLOOD GROUP BUTTONS ---------- */
+/* Each button is a hidden radio input + a label.
+   When the radio is checked, its label turns red. */
+.blood-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.blood-groups input {
+  display: none;
+}
+
+.blood-groups label {
+  flex: 0 0 calc(25% - 6px);   /* 4 buttons per row */
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  background: var(--grey-color);
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.blood-groups input:checked + label {
+  background: var(--main-color);
+  border-color: var(--main-color);
+  color: #ffffff;
+}
+
+/* ---------- 8. FORMS ---------- */
+.form-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--main-color);
+}
+
+.checkbox-row {           /* a checkbox with its text */
+  margin-bottom: 8px;
+}
+
+/* ---------- 9. NOTICE BOX (disclaimers and privacy notes) ---------- */
+.notice {
+  background: #e8f4fd;
+  border-left: 4px solid #1976d2;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* ---------- 10. FOOTER ---------- */
+.footer {
+  background: #2b2b2b;
+  color: #dddddd;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ---------- 11. MOBILE (screens narrower than 600px) ---------- */
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .nav-links a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}

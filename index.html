@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Blood Donation Camp</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR: copy this same block into every page.
+       Only move class="active" to the page you are on. -->
+  <header class="navbar">
+    <div class="container">
+      <a class="logo" href="index.html">🩸 Blood Donation Camp</a>
+      <nav class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="camps.html">Camps</a>
+        <a href="register.html">Become a Donor</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO: headline, buttons and the camp finder card -->
+  <section class="hero">
+    <div class="container">
+
+      <div class="hero-text">
+        <h1>Give Blood.<br><span class="red">Save Lives.</span></h1>
+        <p>Find an upcoming blood donation camp, check if you can donate, and register as a voluntary donor.</p>
+        <div class="hero-buttons">
+          <a class="button" href="camps.html">Find a Camp</a>
+          <a class="button button-outline" href="register.html">Become a Donor</a>
+        </div>
+      </div>
+
+      <!-- Finder card: pick a blood group, type a city, press Search -->
+      <div class="finder-card card">
+        <h3>Find a Camp</h3>
+        <form action="camps.html">
+          <p class="field-label">Your blood group</p>
+          <div class="blood-groups">
+            <input type="radio" name="group" id="ap"><label for="ap">A+</label>
+            <input type="radio" name="group" id="an"><label for="an">A-</label>
+            <input type="radio" name="group" id="bp"><label for="bp">B+</label>
+            <input type="radio" name="group" id="bn"><label for="bn">B-</label>
+            <input type="radio" name="group" id="abp"><label for="abp">AB+</label>
+            <input type="radio" name="group" id="abn"><label for="abn">AB-</label>
+            <input type="radio" name="group" id="op"><label for="op">O+</label>
+            <input type="radio" name="group" id="on"><label for="on">O-</label>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city">
+          </div>
+
+          <button class="button" type="submit">Search</button>
+          <p class="small-text">Demo only: this search does not filter the camp list.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NUMBERS: sample data, clearly labelled -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Camps at a Glance</h2>
+      <div class="card-row">
+        <div class="card stat-card">
+          <div class="stat-number">12</div>
+          <p>Camps organised</p>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-number">350</div>
+          <p>Donors registered</p>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-number">8</div>
+          <p>Blood groups welcome</p>
+        </div>
+      </div>
+      <p class="small-text" style="text-align:center;">Sample data for this college project.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS: the steps of a camp -->
+  <section class="section" style="background: var(--grey-color);">
+    <div class="container">
+      <h2 class="section-title">How a Camp Works</h2>
+      <div class="card-row">
+        <div class="card">
+          <h3>1. Register</h3>
+          <p>Fill in a short form with your details and a health questionnaire.</p>
+        </div>
+        <div class="card">
+          <h3>2. Screening</h3>
+          <p>Medical staff check your weight, blood pressure, pulse and hemoglobin.</p>
+        </div>
+        <div class="card">
+          <h3>3. Donate</h3>
+          <p>The donation itself takes about 10 to 15 minutes.</p>
+        </div>
+        <div class="card">
+          <h3>4. Rest</h3>
+          <p>Relax and enjoy refreshments before you leave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER: copy this block into every page -->
+  <footer class="footer">
+    <div class="container">
+      <p>This website is an academic project for [your course code]. It is not a real blood donation camp or an official health service. All names, numbers and statistics are sample data, and no information entered here is stored.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

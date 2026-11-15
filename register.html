@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Donor - Blood Donation Camp</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a class="logo" href="index.html">🩸 Blood Donation Camp</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="camps.html">Camps</a>
+        <a class="active" href="register.html">Become a Donor</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container form-box">
+      <h2 class="section-title">Donor Registration</h2>
+
+      <!-- Medical note: final eligibility is decided at the camp -->
+      <div class="notice">
+        <strong>Medical note:</strong> Donors should be aged 18 to 65 and weigh at least 45 kg, as per National Blood Transfusion Council guidelines. Final eligibility is always decided by the medical staff at the camp.
+      </div>
+
+      <!-- This demo form does not send or store anything (action="#") -->
+      <form action="#" method="get">
+
+        <div class="form-group">
+          <label class="field-label" for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Sample Name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="age">Age (18 to 65)</label>
+          <input type="number" id="age" name="age" min="18" max="65" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="weight">Weight in kg (minimum 45)</label>
+          <input type="number" id="weight" name="weight" min="45" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="blood">Blood group</label>
+          <select id="blood" name="blood" required>
+            <option value="">Select</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="phone">Phone (10 digits)</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="last">Last donation date (leave empty if never)</label>
+          <input type="date" id="last" name="last">
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="camp">Camp you want to attend</label>
+          <select id="camp" name="camp" required>
+            <option value="">Select a camp</option>
+            <option>Community Blood Donation Camp - 5 December 2026</option>
+            <option>College Campus Camp - 20 December 2026</option>
+          </select>
+        </div>
+
+        <!-- Health questions -->
+        <p class="field-label">Health check (tick if true)</p>
+        <div class="checkbox-row">
+          <input type="checkbox" id="well" name="well">
+          <label for="well">I feel well and healthy today</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="fever" name="fever">
+          <label for="fever">I have not had fever, cold or antibiotics in the last 15 days</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="tattoo" name="tattoo">
+          <label for="tattoo">I have not had a tattoo or piercing recently</label>
+        </div>
+
+        <!-- Privacy note and consent -->
+        <div class="notice" style="margin-top: 20px;">
+          <strong>Privacy note:</strong> We ask only for the details above, to register you for a camp. This is a demo, so nothing you enter is stored. In a real system you could ask for your details to be removed.
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">I confirm my details are correct and I am donating voluntarily, without payment.</label>
+        </div>
+
+        <p>
+          <button class="button" type="submit">Register</button>
+          <button class="button button-outline" type="reset">Clear</button>
+        </p>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>This website is an academic project for [your course code]. It is not a real blood donation camp or an official health service. All names, numbers and statistics are sample data, and no information entered here is stored.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
